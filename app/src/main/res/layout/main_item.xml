@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img1"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombretxt"
+            android:text="Nombre"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/apellidotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/nombretxt"/>
+
+        <TextView
+            android:id="@+id/emailtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/apellidotxt"
+            />
+
+        <LinearLayout
+            android:layout_below="@id/emailtxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_editar"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:text="Editar" />
+
+            <Button
+                android:id="@+id/btn_eliminar"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:text="eliminar" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
